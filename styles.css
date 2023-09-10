@@ -53,6 +53,11 @@ img, picture {
   border-radius: 0.625rem;
 }
 
+.card-img img{
+  min-height: 100%;
+  object-fit: cover;
+}
+
 .card-content {
   display: grid;
   gap: 1rem;
