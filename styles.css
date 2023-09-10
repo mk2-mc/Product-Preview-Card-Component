@@ -1,0 +1,121 @@
+:root {
+  --clr-primary-500: hsl(158, 36%, 37%);
+  --clr-primary-800: hsl(158, 36%, 20%);
+  
+  --clr-secondary-200: hsl(30, 38%, 92%);
+  
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-500: hsl(228, 12%, 48%);
+  --clr-neutral-800: hsl(212, 21%, 14%);
+  
+  --ff-base: 'Montserrat', sans-serif;
+  --ff-accent: 'Fraunces', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-family: var(--ff-base);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--clr-neutral-500);
+  background-color: var(--clr-secondary-200);
+}
+
+img, picture {
+  display: block;
+  max-width: 100%;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.card {
+  display: grid;
+  overflow: hidden;
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.625rem;
+}
+
+.card-content {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.card-category {
+  font-size: 0.8rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-family: var(--ff-accent);
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--clr-neutral-800);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.current-price {
+  font-family: var(--ff-accent);
+  font-size: 2rem;
+  color: var(--clr-primary-500);
+}
+
+.previous-price {
+  font-size: 0.8rem;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--clr-primary-500);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--clr-neutral-100);
+  transition: 0.2s;
+}
+
+.button:focus-visible, .button:hover {
+  background-color: var(--clr-primary-800);
+}
+
+@media only screen and (min-width: 37.5em) {
+  .card {
+    grid-template-columns: 1fr 1fr;
+    max-width: 37.5rem;
+  }
+
+  .card-content {
+    padding: 2rem;
+  }
+}
