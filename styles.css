@@ -31,7 +31,8 @@ body {
   background-color: var(--clr-secondary-200);
 }
 
-img, picture {
+img,
+picture {
   display: block;
   max-width: 100%;
 }
@@ -110,7 +111,8 @@ img, picture {
   transition: 0.2s;
 }
 
-.button:focus-visible, .button:hover {
+.button:focus-visible,
+.button:hover {
   background-color: var(--clr-primary-800);
 }
 
